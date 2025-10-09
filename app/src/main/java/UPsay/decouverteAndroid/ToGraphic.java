@@ -25,7 +25,6 @@ public class ToGraphic extends View {
         super(context, attrs);
         setXYText(550,1200);
         timerHandler.postDelayed(updateTimerThread, 10);
-        Toast.makeText(getContext(),"Bonjour", Toast.LENGTH_SHORT).show();
     }
 
     Runnable updateTimerThread = new Runnable() {
@@ -63,7 +62,7 @@ public class ToGraphic extends View {
         String scpt= String.valueOf(cpt);
         canvas.drawText(scpt, xText, yText+100, p);
         Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.jack_o_lantern);
-        b = Bitmap.createBitmap(b,0,0,310,310);
+        b = Bitmap.createBitmap(b,0,0,280,280);
         canvas.drawBitmap(b, 380,450,p);
     }
 
@@ -72,6 +71,7 @@ public class ToGraphic extends View {
         xText = event.getX();
         yText = event.getY();
         invalidate();
+        Toast.makeText(getContext(),"Bonjour", Toast.LENGTH_SHORT).show();
         return false;
     }
 
