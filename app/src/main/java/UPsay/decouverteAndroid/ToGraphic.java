@@ -137,7 +137,7 @@ public class ToGraphic extends View {
         canvas.drawText(scpt, xText, yText+100, p);
         canvas.drawText(sacc, xText, yText+200, p);
         Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.jack_o_lantern);
-        b = Bitmap.createBitmap(b,0,0,310,310);
+        b = Bitmap.createBitmap(b,0,0,280,280);
         canvas.drawBitmap(b, 380,450,p);
     }
 
